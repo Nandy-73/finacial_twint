@@ -1,0 +1,82 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 222 47% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 10%;
+
+    --primary: 200 84% 19%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 187 89% 29%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 15% 92%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 355 96% 68%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 44%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 84% 20%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 200 84% 19%;
+    --sidebar-foreground: 210 33% 98%;
+    --sidebar-primary: 187 89% 29%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 15% 27%;
+    --sidebar-accent-foreground: 210 33% 98%;
+    --sidebar-border: 187 89% 29%;
+    --sidebar-ring: 210 33% 98%;
+  }
+
+  * {
+    @apply border-border;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-findt-light text-findt-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-findt-primary;
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-findt-primary text-white hover:bg-opacity-90 font-medium px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-findt-secondary text-white hover:bg-opacity-90 font-medium px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .input-field {
+    @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-findt-secondary;
+  }
+}
